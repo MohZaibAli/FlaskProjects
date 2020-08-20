@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Notes For You
+{% endblock %}
+
+{% block heading %}
+    Notes :
+{% endblock %}
+
+{% block listname %}
+    <ul>
+        {% for note in notes %}
+        <li>
+            {{ note }}
+        </li>
+        {% endfor %}
+    </ul>
+{% endblock %}
+{% block body %}
+    <h2>
+        Session Remains Loaded Until Not Refreshed
+    </h2>
+    <form action="{{ url_for("knots") }}" method="post">
+        <input name="note" placeholder="Enter A Note Here" type="text">
+        <button> Add Note! </button>
+    </form>
+{% endblock %}
+
+{% block body1 %}
+    <h2>
+        Session Content Overwrites
+    </h2>
+    <form action="{{ url_for("knots1") }}" method="post">
+        <input name="note" placeholder="Enter A Note Here" type="text">
+        <button> Add Note! </button>
+    </form>
+{% endblock %}
+
+{% block body2 %}
+    <h2>
+        Session Content Remains Loaded Even If Refreshed
+    </h2>
+    <form action="{{ url_for("knots2") }}" method="post">
+        <input name="note" placeholder="Enter A Note Here" type="text">
+        <button> Add Note! </button>
+    </form>
+{% endblock %}

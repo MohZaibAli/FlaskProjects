@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    More Info
+{% endblock %}
+
+{% block heading %}
+    First Page :
+{% endblock %}
+{% block body %}
+    <p>
+        In This Para I,m Providing A Little Amount Of Info Related To HTML, CSS, Python, Flask, Django, JavaScript.
+    </p>
+    <a href="{{ url_for("more")}}">
+        Read More...
+    </a>
+{% endblock %}
